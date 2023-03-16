@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before approval</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+        }
+        button{
+            background-color: #4CAF50;
+            width: 25%;
+            padding: 15px;
+            color: black;
+            border: none;
+            float: center;
+            font-size: 15px;
+        }
+        label{
+            font-size: 20px;
+        }
+        form{
+            border: 3px solid #f1f1f1;
+        }
+        input[type=email],input[type=text]{
+            width: 50%;
+            font-size: 15px;
+            margin: 8px 0px;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid green;
+            box-sizing: border-box;
+        }
+        input[type=radio]{
+            height: 18px;
+            width: 18px;
+        }
+        button:hover{
+            opacity:0.7;
+
+        }
+        .container{
+            padding: 50px;
+            background-color: white;
+        }
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+          
+        img.avatar {
+            width: 10%;
+            border-radius: 50%;
+        }  
+    </style>
+</head>
+<body>
+
+
+        <center><h1> From</h1></center>
+        <form action="#" method="post">
+            {% csrf_token %}
+            <center><div class="container">
+              <center><h1>Before Approval</h1></center> 
+                <center><h3>project</h3></center>
+
+                
+                <label for='project_id'><b>project ID : </b></label>
+		        <input type='text' placeholder="Enter Project ID" name='Project ID' required><br>
+                <label for='p_title'><b>project Title : </b></label>
+		        <input type='text' placeholder="Enter Project Title" name='Project Title' required><br>
+		        <label for='p_tenure'><b>Project Tenure</b></label>
+		        <input type='text' placeholder='Enter tenure(months)' required><br>
+               
+                <center><h3>project Manager</h3></center>
+
+                <label for='pm_dept_id'><b>project Manager Department ID : </b></label>
+		        <input type='text' placeholder="Enter Project Project Manager Department ID" name='Project manager Department ID' required><br>
+		        <label for='dept_id'><b>Department ID : </b></label>
+		        <input type='text' placeholder="Enter Department ID" name='Department ID' required><br>
+                <label for='dept_name'><b>Department Name : </b></label>
+		        <input type='text' placeholder="Enter Department Name" name='Department Name' required><br>
+              
+
+                <label for='l_id'><b>Location ID : </b></label>
+		        <input type='text' placeholder="Enter Location ID" name='Supplier ID' required><br>
+               
+                <label for='l_name'><b>Location : </b></label>
+		        <input type='text' placeholder="Enter Location" name='l_name' required><br>
+              
+
+
+                <label for='pm_id'><b>project Manager ID : </b></label>
+		        <input type='text' placeholder="Enter Project Manager mail" name='Project manager ID' required><br>
+                <label for='pm_mail'><b>project Manager MAil : </b></label>
+		        <input type='text' placeholder="Enter Project Manager mail" name='Project manager mail' required><br>
+                <label for='pm_name'><b>project Manager NAme : </b></label>
+		        <input type='text' placeholder="Enter Project Manager NAme" name='Project manager NAme' required><br>
+              
+
+
+                <center><h3>Budgetory quote</h3></center>
+
+		        <label for='capex'><b>Capex</b></label>
+		        <input type='text' placeholder='Enter Capex Amount' required><br>
+                <label for='opex'><b>Opex : </b></label>
+		        <input type='text' placeholder="Enter Opex Amount" name='Budget ID' required><br>
+		    
+                <center><h1> Approved (AA&ES,PROJECT BUDGDT, PROJECT FUND CENTER)</h1></center> 
+
+ 
+                <label for='budgetory_id'><b>Budgetory ID : </b></label>
+		        <input type='text' placeholder="Enter Budgetory ID" name='Budgetory ID' required><br>
+                <label for='capex'><b>Capex</b></label>
+		        <input type='text' placeholder='Enter Capex Amount' required><br>
+                <label for='opex'><b>Opex : </b></label>
+		        <input type='text' placeholder="Enter Opex Amount" name='Budget ID' required><br>
+                <label for="doa">Date of Approval:</label>
+                <input type="date" id="doa" name="doa"required><br>
+                <label for='FY_id'><b>FY ID : </b></label>
+		        <input type='text' placeholder="Enter FY ID" name='FY ID' required><br>
+                <label for='FC_id'><b>FC ID : </b></label>
+		        <input type='text' placeholder="Enter FC ID" name='FC ID' required><br>
+             
+
+                <center><h1> actual expenditure</h1></center> 
+
+ 
+                 <label for='capex'><b>Capex</b></label>
+		        <input type='text' placeholder='Enter Capex Amount' required><br>
+                <label for='opex'><b>Opex : </b></label>
+		        <input type='text' placeholder="Enter Opex Amount" name='Budget ID' required><br>
+                <label for="doa">Date of Expenditure:</label>
+                <input type="date" id="doe" name="doe"required><br>
+
+                <center><h1> actual expenditure</h1></center> 
+
+                <label for="doa">Date of Award:</label>
+                <input type="date" id="doaw" name="doaw"required><br>
+                <label for='capex'><b>Capex</b></label>
+		        <input type='text' placeholder='Enter Capex Amount' required><br>
+                <label for='opex'><b>Opex : </b></label>
+		        <input type='text' placeholder="Enter Opex Amount" name='Budget ID' required><br>
+                <label for="doc">Date of Completion:</label>
+                <input type="date" id="doc" name="doc"required><br>
+       
+                <center><h1> actual expenditure</h1></center> 
+               
+
+                <label for='deduction'><b>Deduction</b></label>
+		        <input type='text' placeholder='Enter Deduction Amount' required><br>
+                <label for='withheld'><b>With Held</b></label>
+		        <input type='text' placeholder='Enter  withheld' required><br>
+                <label for='utilized'><b>utilized</b></label>
+		        <input type='text' placeholder='Enter utilized Amount' required><br>
+                
+                <center><h1> actual expenditure</h1></center> 
+                <label for='supplier_id'><b>supplier ID : </b></label>
+		        <input type='text' placeholder="Enter supplier ID" name='Supplier ID' required><br>
+               
+                <label for='s_name'><b>Supplier Name : </b></label>
+		        <input type='text' placeholder="Enter Supplier Name" name='s_name' required><br>
+              
+                <label for='c_name'><b>Company Name : </b></label>
+		        <input type='text' placeholder="Enter Company Name" name='c_name' required><br>
+              
+               
+
+                <label for='gst_no'><b>GST No. : </b></label>
+		        <input type='text' placeholder="Enter GST No." name='GST No.' required><br>
+                <label for='transaction'><b>Transaction : </b></label>
+		        <input type='text' placeholder="Enter Transaction" name='transaction' required><br>
+             
+                
+
+            	<button type="submit"><b>submit</b></button><br>     
+
+            </div></center>
+        </form>
+</body>
+</html>
